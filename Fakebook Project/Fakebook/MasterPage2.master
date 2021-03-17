@@ -1,0 +1,94 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage2.master.cs" Inherits="MasterPage2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+
+        .style1
+        {
+            width:100px;
+            height:500px;
+            width: 100%;
+            height: 100%;
+        }
+        .style12
+        {
+            height: 109px;
+            width: 517px;
+        }
+        .style3
+        {
+            width: 171px;
+            height: 43px;
+        }
+        .style22
+        {
+            height: 109px;
+            }
+        .style2
+        {
+            height: 100%;
+        }
+        .Circle{font-size:20px;
+font-size:1vmax;
+pointer-events:auto;
+cursor:pointer;
+background:0 0;
+width:initial;
+padding:1.452vh 2.96vw;
+border-radius:40px;
+color:#121416;
+border:1px solid #121416;
+display:inline-block;
+margin:0;
+box-shadow:0 0 1px -1px #121416;
+font-family:inherit}
+        </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+    </div>
+    
+        <table class="style1" frame="border">
+            <tr>
+                <td align="center" bgcolor="#3C5A98" class="style12" 
+                    style="font-family: Arial, Helvetica, sans-serif; color: #FFFFFF">
+                    <asp:HyperLink 
+                        ID="HyperLink2" runat="server" NavigateUrl="~/FirstPage.aspx"><img alt="Logo" class="style3" src="images/logo.jpg" /></asp:HyperLink>
+                </td>
+                <td align="center" bgcolor="#3C5A98" class="style22" 
+                    style="font-family: Arial, Helvetica, sans-serif; color: #FFFFFF">
+                    <h2>
+                        This site 
+                        was created for school purposes only</h2>
+                    
+                    </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="background-color: #EDF0F5">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td class="style2" colspan="2" bgcolor="White">
+                    <asp:HyperLink ID="HyperLink3" runat="server" 
+                        NavigateUrl="~/Registeration.aspx" CssClass="Circle">Sign Up</asp:HyperLink>
+&nbsp;<asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Login.aspx" CssClass="Circle">Log In</asp:HyperLink>
+                    &nbsp;<asp:HyperLink ID="HyperLink5" runat="server" CssClass="Circle">Forgot Password</asp:HyperLink>
+                    <br />
+                    <span style="color: rgb(115, 115, 115); font-family: Helvetica, Arial, sans-serif; font-size: 11px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">
+                    Fakebook © 2017</span></td>
+            </tr>
+        </table>
+    
+    </form>
+</body>
+</html>

@@ -1,0 +1,55 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data;
+
+public partial class FriendsRequest : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (Session["User"] == null || Session["User"] == "")
+        {
+            Response.Redirect("FirstPage.aspx");
+            return;
+        }
+        if (!IsPostBack)
+        {
+            FriendRequestRefresh();
+        }
+    }
+
+    private void FriendRequestRefresh()
+    {
+        DataSet ds = FriendRequest.GetPending(((Users)Session["User"]).UserID);
+        DataList1.DataSource = ds;
+        DataList1.DataBind();
+
+        if (DataList1.Items.Count == 0)
+        {
+            lblResponse.Text = "No New Friend Requests";
+        }
+        else
+            lblResponse.Text = "Respond to Your Friend Request";
+    }
+
+    protected void DataList1_ItemCommand1(object source, DataListCommandEventArgs e)
+    {
+        if (e.CommandName == "ConfirmClick")
+        {
+            int i = e.Item.ItemIndex;
+            Image img = (Image)(DataList1.Items[i].FindControl("profileImage"));
+            FriendRequest.AcceptFriendRequest(int.Parse(img.AlternateText), ((Users)Session["User"]).UserID);
+            FriendRequestRefresh();
+        }
+        else if (e.CommandName == "DeleteClick")
+        {
+            int i = e.Item.ItemIndex;
+            Image img = (Image)(DataList1.Items[i].FindControl("profileImage"));
+            FriendRequest.DeleteFriendRequest(int.Parse(img.AlternateText), ((Users)Session["User"]).UserID);
+            FriendRequestRefresh();
+        }
+    }
+}

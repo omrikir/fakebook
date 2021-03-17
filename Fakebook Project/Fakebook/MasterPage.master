@@ -1,0 +1,154 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.9.2/jquery-ui.min.js" type="text/javascript"></script>
+<link href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.9.2/themes/blitzer/jquery-ui.css"
+    rel="Stylesheet" type="text/css" />
+    <script type="text/javascript">
+        $(function () {
+            $("[id$=txtSearch]").autocomplete({
+                source: function (request, response) {
+                    $.ajax({
+                        url: '<%=ResolveUrl("~/Login.aspx/GetCustomers") %>',
+                        data: "{ 'prefix': '" + request.term + "'}",
+                        dataType: "json",
+                        type: "POST",
+                        contentType: "application/json; charset=utf-8",
+                        success: function (data) {
+                            var count = 0;
+                            response($.map(data.d, function (item) {
+                                count++;
+                                if (count <= 5)
+                                    return {
+                                        label: item.split('-')[0],
+                                        val: item.split('-')[1],
+                                        image: item.split('-')[2]
+                                    };
+                                else
+                                    return false;
+                            }))
+                        },
+                        error: function (response) {
+                            alert(response.responseText);
+                        },
+                        failure: function (response) {
+                            alert(response.responseText);
+                        }
+                    });
+                },
+                select: function (e, i) {
+                    location.href = "Profiles.aspx?id=" + i.item.val;
+                },
+                minLength: 1
+            }).data("ui-autocomplete")._renderItem = function (ul, item) {
+                if (item.val != undefined) {
+                    var inner_html = '<a style="text-decoration:none;" href="Profiles.aspx?id=' + item.val + '"><div><p style="float: left;"><img height="25px" width="25px" src="' + item.image + '"></p><p>' + item.label + '</p></div></a><hr/>';
+                    return $("<li></li>")
+                    .data("ui-autocomplete-item", item)
+                    .append(inner_html)
+                    .appendTo(ul);
+                }
+                else
+                    return false;
+            };
+        });
+    </script>
+
+
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+        .style2
+        {
+            width: 47px;
+            height: 34px;
+        }
+        .style3
+        {
+            height: 22px;
+        }
+        .style4
+        {
+            height: 22px;
+            width: 517px;
+        }
+        .style5
+        {
+        }
+        .style6
+        {
+            width: 69px;
+            height: 57px;
+        }
+        .style7
+        {
+            width: 62px;
+            height: 59px;
+        }
+        .style8
+        {
+            width: 60px;
+            height: 60px;
+            visibility:hidden;
+        }
+        div * {
+            margin-top:auto;
+            margin-bottom:auto;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+    </div>
+    <table class="style1" style="height: 100%; width: 100%">
+        <tr>
+            <td bgcolor="#3C5A98" class="style4">
+                <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/FakebookPage.aspx"><img alt="Icon" class="style2" src="images/Icon.jpg" /></asp:HyperLink>
+                <asp:TextBox ID="txtSearch" runat="server" Width="168px"></asp:TextBox> 
+                <asp:Button ID="btnSearch" runat="server" Text="Search" BackColor="#3C5A98" 
+                    BorderColor="#3C5A98" onclick="btnSearch_Click" />
+            &nbsp;&nbsp;&nbsp;
+            </td>
+            <td bgcolor="#3C5A98" class="style3">
+                <asp:HyperLink ID="myProfileLink" runat="server" ForeColor="White" 
+                    NavigateUrl="~/MyProfile.aspx">My Profile</asp:HyperLink>
+&nbsp;<asp:HyperLink ID="homePageLink" runat="server" ForeColor="White" 
+                    NavigateUrl="~/FakebookPage.aspx">Home Page</asp:HyperLink>
+&nbsp;<asp:HyperLink 
+                    ID="HyperLink1" runat="server" NavigateUrl="~/FriendsRequest.aspx"><img 
+                    alt="My Friends" class="style6" 
+                    src="images/FriendRequest.png" ID="imgFriendRequest" /></asp:HyperLink>
+                <asp:HyperLink ID="HyperLink3" runat="server" 
+                    NavigateUrl="~/MessageFriends.aspx"><img alt="Chat" class="style7" src="images/5.png" /></asp:HyperLink>
+                <asp:HyperLink ID="BuyAD" runat="server" NavigateUrl="~/MyAdsControl.aspx"><img class="style7" src="images/Ads.png" /></asp:HyperLink>
+                
+                <img alt="Notifications" 
+                    class="style8" src="images/6.png" />
+                <asp:LinkButton ID="LogOut" runat="server" onclick="LogOut_Click" 
+                    ForeColor="White">Log Out</asp:LinkButton>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="lblUsername" runat="server" Font-Bold="True" 
+                    Font-Underline="True" ForeColor="White"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td class="style5" colspan="2">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
