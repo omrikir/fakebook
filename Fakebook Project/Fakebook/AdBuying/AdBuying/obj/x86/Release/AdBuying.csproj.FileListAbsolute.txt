@@ -1,0 +1,30 @@
+C:\Users\User\AppData\Local\Temporary Projects\AdBuying\bin\Release\AdService.mdf
+C:\Users\User\AppData\Local\Temporary Projects\AdBuying\bin\Release\AdService_log.ldf
+C:\Users\User\AppData\Local\Temporary Projects\AdBuying\bin\Release\AdBuying.exe.config
+C:\Users\User\AppData\Local\Temporary Projects\AdBuying\bin\Release\AdBuying.exe
+C:\Users\User\AppData\Local\Temporary Projects\AdBuying\bin\Release\AdBuying.pdb
+C:\Users\User\AppData\Local\Temporary Projects\AdBuying\obj\x86\Release\AdBuying.Form1.resources
+C:\Users\User\AppData\Local\Temporary Projects\AdBuying\obj\x86\Release\AdBuying.Properties.Resources.resources
+C:\Users\User\AppData\Local\Temporary Projects\AdBuying\obj\x86\Release\AdBuying.csproj.GenerateResource.Cache
+C:\Users\User\AppData\Local\Temporary Projects\AdBuying\obj\x86\Release\AdBuying.exe
+C:\Users\User\AppData\Local\Temporary Projects\AdBuying\obj\x86\Release\AdBuying.pdb
+F:\BackUp\2018\Fakebook\AdBuying\AdBuying\bin\Release\AdBuying.exe.config
+F:\BackUp\2018\Fakebook\AdBuying\AdBuying\obj\x86\Release\AdBuying.exe
+F:\BackUp\2018\Fakebook\AdBuying\AdBuying\obj\x86\Release\AdBuying.pdb
+F:\BackUp\2018\Fakebook\AdBuying\AdBuying\bin\Release\AdService.mdf
+F:\BackUp\2018\Fakebook\AdBuying\AdBuying\bin\Release\AdService_log.ldf
+F:\BackUp\2018\Fakebook\AdBuying\AdBuying\bin\Release\AdBuying.exe
+F:\BackUp\2018\Fakebook\AdBuying\AdBuying\bin\Release\AdBuying.pdb
+F:\BackUp\2018\Fakebook\AdBuying\AdBuying\obj\x86\Release\AdBuying.Form1.resources
+F:\BackUp\2018\Fakebook\AdBuying\AdBuying\obj\x86\Release\AdBuying.Properties.Resources.resources
+F:\BackUp\2018\Fakebook\AdBuying\AdBuying\obj\x86\Release\AdBuying.csproj.GenerateResource.Cache
+E:\BackUp\2018\Fakebook\AdBuying\AdBuying\bin\Release\AdService.mdf
+E:\BackUp\2018\Fakebook\AdBuying\AdBuying\bin\Release\AdService_log.ldf
+E:\BackUp\2018\Fakebook\AdBuying\AdBuying\bin\Release\AdBuying.exe.config
+E:\BackUp\2018\Fakebook\AdBuying\AdBuying\bin\Release\AdBuying.exe
+E:\BackUp\2018\Fakebook\AdBuying\AdBuying\bin\Release\AdBuying.pdb
+E:\BackUp\2018\Fakebook\AdBuying\AdBuying\obj\x86\Release\AdBuying.Form1.resources
+E:\BackUp\2018\Fakebook\AdBuying\AdBuying\obj\x86\Release\AdBuying.Properties.Resources.resources
+E:\BackUp\2018\Fakebook\AdBuying\AdBuying\obj\x86\Release\AdBuying.csproj.GenerateResource.Cache
+E:\BackUp\2018\Fakebook\AdBuying\AdBuying\obj\x86\Release\AdBuying.exe
+E:\BackUp\2018\Fakebook\AdBuying\AdBuying\obj\x86\Release\AdBuying.pdb

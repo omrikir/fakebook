@@ -1,0 +1,13 @@
+F:\BackUp\2018\Fakebook\AdBuying\AdBuying\bin\Debug\AdService.mdf
+F:\BackUp\2018\Fakebook\AdBuying\AdBuying\bin\Debug\AdService_log.ldf
+F:\BackUp\2018\Fakebook\AdBuying\AdBuying\bin\Debug\AdBuying.exe.config
+F:\BackUp\2018\Fakebook\AdBuying\AdBuying\bin\Debug\AdBuying.exe
+F:\BackUp\2018\Fakebook\AdBuying\AdBuying\bin\Debug\AdBuying.pdb
+F:\BackUp\2018\Fakebook\AdBuying\AdBuying\obj\x86\Debug\AdBuying.Form1.resources
+F:\BackUp\2018\Fakebook\AdBuying\AdBuying\obj\x86\Debug\AdBuying.Properties.Resources.resources
+F:\BackUp\2018\Fakebook\AdBuying\AdBuying\obj\x86\Debug\AdBuying.csproj.GenerateResource.Cache
+F:\BackUp\2018\Fakebook\AdBuying\AdBuying\obj\x86\Debug\AdBuying.exe
+F:\BackUp\2018\Fakebook\AdBuying\AdBuying\obj\x86\Debug\AdBuying.pdb
+E:\BackUp\2018\Fakebook\AdBuying\AdBuying\bin\Debug\AdBuying.exe.config
+E:\BackUp\2018\Fakebook\AdBuying\AdBuying\obj\x86\Debug\AdBuying.exe
+E:\BackUp\2018\Fakebook\AdBuying\AdBuying\obj\x86\Debug\AdBuying.pdb
